@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        task5();
+        task8();
     }
 
     public static void task5() {
@@ -53,12 +53,10 @@ public class Main {
         Arrays.sort(sortirovka);
         String dubli = new String(sortirovka);
         StringBuilder noDubli = new StringBuilder();
-        for (int i = 0; i < dubli.length(); i++) {
-            for (int j = 0; j < dubli.length(); j++) {
-                if (i != j && dubli.charAt(i) == dubli.charAt(j) && i > j) {
+        for (int i = 0; i < dubli.length()-1; i++)  {
+                if (dubli.charAt(i) == dubli.charAt(i+1)) {
                     noDubli.append(dubli.charAt(i));
                 }
-            }
         }
         System.out.println(noDubli);
     }
